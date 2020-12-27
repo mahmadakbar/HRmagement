@@ -1,0 +1,106 @@
+@font-face {
+   font-family: 'Material Icons';
+   font-style: normal;
+   font-weight: 400;
+   src: url(../googlefont/iconfont/MaterialIcons-Regular.eot); /* For IE6-8 */
+   src: local('Material Icons'),
+        local('MaterialIcons-Regular'),
+        url(../googlefont/iconfont/MaterialIcons-Regular.woff2) format('woff2'),
+        url(../googlefont/iconfont/MaterialIcons-Regular.woff) format('woff'),
+        url(../googlefont/iconfont/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+body, html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #dff9fb;
+    overflow: hidden;overflow: hidden;overflow: hidden;overflow: hidden;
+}
+
+#header_wisata{
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 25px;
+  background-color: #fff;
+  -webkit-app-region: drag;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.158), 0 3px 10px 0 rgba(0, 0, 0, 0.116);
+}
+
+.btn-outline-dark{
+    float: right;
+    margin: 0;
+    padding: 0;
+    height: 25px;
+    width: 40px;
+    border-radius: 0;
+    border: 0;
+    -webkit-app-region: no-drag;
+}
+
+#main_wisata{
+    position: absolute;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    margin-top: 25px;
+}
+
+#loading_page{
+    position: absolute;
+    z-index: 50;
+    background-color: #00aff0;
+    height: 100%;
+    width: 100%;
+}
+
+@keyframes slideOutUp {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes slideOutDown {
+  from {
+    visibility: visible;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}

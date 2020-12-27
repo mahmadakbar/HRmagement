@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>BBIB APP</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
+  <link rel="stylesheet" href="assets/fontawesome/css/all.css">
+  <link rel="stylesheet" href="assets/DataTables/Bootstrap-4-4.1.1/css/bootstrap.min.css">
+  <script src="assets/DataTables/Bootstrap-4-4.1.1/js/bootstrap.min.js"></script>
+  <script src="assets/DataTables/jQuery-3.3.1/jquery-3.3.1.min.js"></script>
+  <script src="assets/js/jquery.mousewheel.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/video.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/page.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/loader.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body onload="loaderFunction()">
+  <div id="header_main"></div>
+  <div id="loader_main">
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+          <filter id="gooey">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></feColorMatrix>
+            <feBlend in="SourceGraphic" in2="goo"></feBlend>
+          </filter>
+        </defs>
+      </svg>
+      <div class="blob blob-0"></div>
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <div class="blob blob-4"></div>
+      <div class="blob blob-5"></div>
+  </div>
+
+  <div class="ct" id="t1">
+    <div class="ct" id="t2">
+      <div class="ct" id="t3">
+        <div class="ct" id="t4">
+          <div class="ct" id="t5">
+            <ul id="menu">
+              <a href="#t1" class="tooltip-right" data-tooltip="Home"><li class="icon fas fa-home" id="uno"></li></a>
+              <a href="#t2" class="tooltip-right-2" data-tooltip="Bimbingan"><li class="icon fas fa-book-open" id="dos"></li></a>
+              <a href="#t3" class="tooltip-right-2" data-tooltip="Wisata"><li class="icon fas fa-truck-monster" id="tres"></li></a>
+              <a href="#t4" class="tooltip-right-2" data-tooltip="Sample"><li class="icon fab fa-cloudversify" id="cuatro"></li></a>
+              <a href="#t5" class="tooltip-right-2" data-tooltip="Setting"><li class="icon fas fa-cog" id="cinco"></li></a>
+            </ul>
+            <div class="page" id="p1">
+              <section>
+
+                <div class="square"></div>
+
+                <span class="container2"></span>
+                
+                <div id="wrapper">
+                  <div class="container">
+                      <h1 class="title_home">ARSIP DAN DATABASE</h1>
+                      <p class="subtitle_home">Balai Besar Inseminasi Buatan Singosari</p>
+                  </div>
+
+                </div>
+
+                <video autoplay loop id="video-background" muted plays-inline>
+                  <source src="assets/background/grass.MP4" type="video/mp4">
+                </video>
+
+              </section>
+            </div>
+            
+            <div class="page" id="p2">
+              <section>
+                
+                <img class="back_bimbingan" src="assets/background/blackboard.jpg" alt="Bimbingan">
+
+                <div id="wrapper_bimbingan">
+                  <h1 class="title_bimbingan fadeInUp_anim">Database Bimbingan</h1>
+                  <button id="btn_bimbingan" type="button" class="btn btn-outline-light fadeInUp2_anim">Masuk</button>
+                </div>
+
+              </section>
+            </div>
+            <div class="page" id="p3">
+              <section>
+                
+                <img class="back_wisata" src="assets/background/coffee.jpg" alt="Bimbingan">
+
+                <div id="wrapper_wisata">
+                  <h1 class="title_wisata zoomIn_anim">Database Wisata</h1>
+                  <button id="btn_wisata" type="button" class="btn btn-outline-light fadeInUp2_anim">Masuk</button>
+                </div>
+
+              </section>
+            </div>
+            <div class="page" id="p4">
+              <section>
+                <img class="back_database" src="assets/background/chair.jpg" alt="Bimbingan">
+
+                <div id="wrapper_database">
+                  <h1 class="title_database fadeInDown_anim">Database Test</h1>
+                  <button id="btn_test" type="button" class="btn btn-outline-dark fadeInUp2_anim">Masuk</button>
+                </div>
+
+              </section>
+            </div>
+            <div class="page" id="p5">
+              <section>
+                
+                <div id="wrapper_exit">
+                  <button id="btn_exit" type="button" class="btn btn-danger circle_button bounce_anim"><li class="fas fa-power-off"></li></button>
+                  <h1 class="title_setting fadeInUp3_anim">Exit</h1>
+                </div>
+
+                <div id="wrapper_about">
+                  <button id="btn_knowit" onclick="knowit_btn()" type="button" class="btn btn-primary circle_button bounce2_anim"><li class="fas fa-lightbulb"></li></button>
+                  <h1 class="title_setting fadeInUp4_anim">KnowIT</h1>
+                </div>
+
+                <div id="knowit_page">
+                  <a id="back_knowit" style="cursor:pointer" onclick="back_knowit_btn()"><li class="fas fa-chevron-left back_knowit"></li></a>
+                  <div id="main_knowit">
+                    <div id="knowit1">
+                      <img class="logo_app" src="assets/imgs/cromo_data.png" alt="Bimbingan">
+                      <h1 class="title_app">Aplikasi BBI Singosari</h1>
+                      <p class="copyright_app">copyright &copy; <a href="https://www.facebook.com/Mahmadakbar">mahmadakbar</a> 2018 all rights reserved</p>
+                    </div>
+                    <div id="knowit2"></div>
+                    
+                  </div>
+                </div>
+
+                <div id="wrapper_download">
+                  <button id="btn_saved" onclick="saved_btn()" type="button" class="btn btn-success circle_button bounce3_anim"><li class="fas fa-download"></li></button>
+                  <h1 class="title_setting fadeInUp5_anim">Saved</h1>
+                </div>
+
+                <div id="saved_page">
+                  <a id="back_saved" style="cursor:pointer" onclick="back_saved_btn()"><li class="fas fa-chevron-left back_knowit"></li></a>
+                  <div id="main_saved">
+                    <table class="saved_table">
+                      <tr class="saved_bimbingan">
+                        <td><i class="fas fa-caret-down fa-fw"></i></td>
+                        <td width="230px">Download Bimbingan</td>
+                        <td><div class="line_download"></div></td>
+                        <td width="50px" style="text-align:center">0</td>
+                        <td><div class="line_download2"></div></td>
+                      </tr>
+                      <tr class="saved_bimbingan_fill">
+                        <td></td>
+                        <td colspan="2" style="padding-left: 20px; color: #535c68;">Empty : you never downloaded any file before</td>
+                        <td colspan="2" style="padding-left: 20px; color: #535c68;">Date</td>
+                      </tr>
+                      <tr class="saved_wisata">
+                        <td><i class="fas fa-caret-down fa-fw"></i></td>
+                        <td width="230px">Download Wisata</td>
+                        <td><div class="line_download"></div></td>
+                        <td width="50px" style="text-align:center">0</td>
+                        <td><div class="line_download2"></div></td>
+                      </tr>
+                      <tr class="saved_wisata_fill">
+                        <td></td>
+                        <td colspan="2" style="padding-left: 20px; color: #535c68;">Empty : you never downloaded any file before</td>
+                        <td colspan="2" style="padding-left: 20px; color: #535c68;">Date</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/index.js"></script>
+  <script>window.$ = window.jQuery = require('jquery');</script>
+  <script>
+    var knowit = document.getElementById('knowit_page');
+    var saved = document.getElementById('saved_page');
+    function knowit_btn() {
+      knowit.style.visibility = "visible";
+      knowit.style.animation = "bounceInRight 0.7s both";
+      setTimeout(function(){
+        var pie_chart = document.getElementById("knowit2");
+        pie_chart.innerHTML='<object type="text/html" data="src/chart.html"></object>';
+      }, 1000);
+    }
+    function back_knowit_btn() {
+      knowit.style.animation = "bounceOutRight 0.7s both";
+    }   
+    function saved_btn() {
+      saved.style.visibility = "visible";
+      saved.style.animation = "bounceInRight 0.7s both";
+    }
+    function back_saved_btn() {
+      saved.style.animation = "bounceOutRight 0.7s both";
+    }
+  </script>
+  
+</body>
+</html>
