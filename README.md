@@ -17,7 +17,3 @@ Simple node.js application that build with electron  framework, can be running i
 ## Settings
 
 ![alt text](https://iili.io/KeTuzN.jpg)
-
-## Forms
-
-![alt text](https://iili.io/KeTIbp.jpg)
